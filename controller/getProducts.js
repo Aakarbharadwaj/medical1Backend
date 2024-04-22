@@ -1,8 +1,8 @@
-const Products = require("../models/TodoSchema");
+const Product = require("../models/ProductSchema");
 
 exports.getProducts = async (req, res) => {
     try {
-        const response = await Products.find();
+        const response = await Product.find();
         // const filtered = response.filter(i => i.title === "Endevor")
         res.status(200).json(response);
     } catch (err) {
