@@ -6,6 +6,7 @@ const cors = require("cors");
 const connectDB = require("./config/db");
 // const product = require('./routes/blog')
 const product = require('./router/produtsRoutes')
+const user = require('./router/user')
 const app = express();
 
 //config
@@ -18,7 +19,7 @@ const PORT = process.env.PORT || 5000
 
 app.use(express.json());
 
-app.use('/api/v1',product)
+app.use('/api/v1',user,product)
 
 app.get("/", (req, res) => {
     res.send("hey baby...")
