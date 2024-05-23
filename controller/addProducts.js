@@ -22,7 +22,7 @@ exports.addProducts = async (req, res) => {
 
         res.status(200).json({
             success: true,
-            date: response,
+            data: response,
             message: 'Entry Created'
         });
     } catch (err) {

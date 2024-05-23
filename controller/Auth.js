@@ -85,7 +85,7 @@ exports.login = async (req, res) => {
             role: user.role,
         }
         const token = jwt.sign(payLoad, process.env.JWT_SECRET, {
-            expiresIn: "2h",
+            expiresIn: "1m",
         });
 
         // user = user.toObject();

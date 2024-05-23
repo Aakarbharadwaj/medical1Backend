@@ -1,4 +1,4 @@
-    const express = require("express");
+const express = require("express");
 const dotenv = require("dotenv");
 
 const cors = require("cors");
@@ -19,12 +19,13 @@ const PORT = process.env.PORT || 5000
 
 app.use(express.json());
 
-app.use('/api/v1',user,product)
+app.use('/api/v1', user, product)
 
 app.get("/", (req, res) => {
     res.send("hey baby...")
 })
 
 app.listen(PORT, () => {
-    console.log(`server is running on ${PORT} in ${process.env.DEV_MODE}`);
+    console.log(`server is running on ${PORT}`);
 });
+ 
